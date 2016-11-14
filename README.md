@@ -25,11 +25,13 @@
 ##Server
 > 需要一个api和存储，来记录clipboard内容
 .php 文件放到服务器上，访问地址通过clip传入文本信息
-将会把clipBoard记录写入文件中
+将会把clipBoard记录写入文件中  
+
 ## Rainmeter on Windows
 1. 使用了plugin : clipboard , 当Measure 发生改变时候，会触发行为
 2. measure的值，可以通过[measureName]的方式，传入String measure
-3. 使用了WebPost.exe， post 发送数据
+3. 使用了WebPost.exe， post 发送数据  
+
 ## Tasker on Android
 1. 使用了tasker的httpd方式，get得到数据。
 
@@ -39,5 +41,14 @@
 - websocket传输
 - mqtt
 
-![Rainmeter-screenshot](./screenshot/rainmeter.png)
+**Rainmeter显示**  
+当复制时，剪贴板文字会显示在中间，并在剪贴板内容发生变化时后台发送web请求  
+右键点击set可以单步执行后台post行为
+左键点击Get可以重新获取服务器上存储的内容，在底部显示
+![Rainmeter-screenshot](./screenshot/rainmeter.png)    
+
+**Tasker显示：**  
+云的图标，是通过launcher自定义选择的。
+并配置了下滑行为。
+当下滑该图标时，发送http get 请求（即服务端网址),取得存储的clipboard数据。  
 ![Tasker-screenshot](./screenshot/tasker-Android.jpg)
